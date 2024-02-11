@@ -41,45 +41,44 @@ h1{
   display: flex;
 }
 .card {
-  filter: brightness(1.25);
+  filter: brightness(1.2);
   position: relative;
   height: 400px;
   width: 100%;
   transition: ease all 2.3s;
   perspective: 2000px;
 }
-.card:hover .cover {
+.card:hover .cover-card {
   transform: rotateX(-10deg) rotateY(-180deg);
 }
-.card:hover .cover:before {
+.card:hover .cover-card:before {
   transform: translateZ(30px);
 }
-.card:hover .cover.item-c:before {
+.card:hover .cover-card.item-c:before {
   transform: translateZ(30px);
 }
-.card:hover .cover.item-c {
+.card:hover .cover-card.item-c {
   transform: rotateY(180deg);
 }
-.card:hover .cover:after {
+.card:hover .cover-card:after {
   background-color: black;
 }
-.card:hover .cover h1 {
+.card:hover .cover-card h1 {
   transform: translateZ(100px);
 }
-.card:hover .cover a {
+.card:hover .cover-card a {
   transform: translateZ(-60px) rotatey(-180deg);
 }
-.card .cover {
+.card .cover-card {
   position: absolute;
   height: 100%;
   width: 100%;
   transform-style: preserve-3d;
   transition: ease all 2.3s;
 }
-.card .cover:before {
+.card .cover-card:before {
   content: "";
   position: absolute;
-  border: 5px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
   top: 20px;
   left: 20px;
@@ -90,7 +89,7 @@ h1{
   transform-style: preserve-3d;
   transform: translateZ(0px);
 }
-.card .cover:after {
+.card .cover-card:after {
   content: "";
   position: absolute;
   top: 0px;
@@ -99,24 +98,23 @@ h1{
   bottom: 0px;
   z-index: 2;
   transition: ease all 1.3s;
-  background: rgba(0, 0, 0, 0.4);
 }
-.card .cover.item-a {
+.card .cover-card.item-a {
   background: url("https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2Fyc3xlbnwwfHwwfHx8MA%3D%3D")
     center center no-repeat;
   background-size: cover;
 }
-.card .cover.item-b {
+.card .cover-card.item-b {
   background: url("https://images.unsplash.com/photo-1602529080077-6e59cbe7ec24?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
     center center no-repeat;
   background-size: cover;
 }
-.card .cover.item-c {
+.card .cover-card.item-c {
   background: url("https://images.unsplash.com/photo-1541348263662-e068662d82af?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNhcnN8ZW58MHx8MHx8fDA%3D")
     center center no-repeat;
   background-size: cover;
 }
-.card .cover h1 {
+.card .cover-card h1 {
   font-weight: 600;
   position: absolute;
   bottom: 55px;
