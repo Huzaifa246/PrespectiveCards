@@ -8,22 +8,36 @@ body section {
   padding: 5%;
   margin: 0 auto;
 }
-.container{
-	display: flex;
-	justify-content: space-around;
-}
-h1{
-	font-weight: 600;
-	color: white;
-	transform-style: preserve-3d;
-	transition: ease all 2.3s;
-	z-index: 3;
-	font-size: 2em;
-	transform: translateZ(0px);
+@media screen and (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
   }
-.d-flexstyle{
-	display: flex;
-	flex-direction: column;
+  .shape {
+    width: 100% !important;
+  }
+  .main-card {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin: 10px 0;
+  }
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+h1 {
+  font-weight: 600;
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  z-index: 3;
+  font-size: 2em;
+  transform: translateZ(0px);
+}
+.d-flexstyle {
+  display: flex;
+  flex-direction: column;
 }
 .frame {
   perspective: 800px;
